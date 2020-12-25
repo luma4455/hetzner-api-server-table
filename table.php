@@ -60,18 +60,18 @@ foreach ($serversarray as &$value) {
 	
 		
     echo "  <tr>
-    <td>" . $value->{'name'} . "</td>
-    <td>" . $value->{'status'} . "</td>
-	<td>" . $value->{'public_net'}->{'ipv4'}->{'ip'} . "</td>
-	<td>" . $value->{'public_net'}->{'ipv6'}->{'ip'} . "</td>
-	<td>" . $value->{'created'} . "</td>
-	<td>" . strval($value->{'server_type'}->{'cores'}) . "</td>
-	<td>" . strval($value->{'server_type'}->{'memory'}) . " GB</td>
-	<td>" . $value->{'private_net'}[0]->{'ip'} . "</td>
-	<td>" . $value->{'datacenter'}->{'description'} . "</td>
-	<td>" . $value->{'datacenter'}->{'location'}->{'city'} . "</td>
-	<td>" . $value->{'datacenter'}->{'location'}->{'network_zone'} . "</td>
-	<td>" . $value->{'image'}->{'description'} . "</td>
+    <td>" . $value->{'name'} . "</td> //VServer Name
+    <td>" . $value->{'status'} . "</td> //VServer Status
+	<td>" . $value->{'public_net'}->{'ipv4'}->{'ip'} . "</td> //IPv4 Address
+ 	<td>" . $value->{'public_net'}->{'ipv6'}->{'ip'} . "</td> //IPv6 Address
+	<td>" . $value->{'created'} . "</td> //Creation Date
+	<td>" . strval($value->{'server_type'}->{'cores'}) . "</td> //VServer Cores
+	<td>" . strval($value->{'server_type'}->{'memory'}) . " GB</td> //VServer Memory
+	<td>" . $value->{'private_net'}[0]->{'ip'} . "</td> //Private Network IP
+	<td>" . $value->{'datacenter'}->{'description'} . "</td> //Datacenter Description
+	<td>" . $value->{'datacenter'}->{'location'}->{'city'} . "</td> //Datacenter City
+	<td>" . $value->{'datacenter'}->{'location'}->{'network_zone'} . "</td> //Datacenter network zone
+	<td>" . $value->{'image'}->{'description'} . "</td> //OS Name
   </tr>";
 	
 }
